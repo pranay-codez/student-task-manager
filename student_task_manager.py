@@ -140,6 +140,7 @@ def main():
 
         elif choice == '4':
             task_manager.delete_task()
+            task_manager.save_task()  # Save after deleting a task
             
 
         elif choice == '5':
