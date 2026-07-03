@@ -1,3 +1,4 @@
+
 # Student Task Manager
 
 A command-line task management application built with Python to help students organize and manage their academic tasks.

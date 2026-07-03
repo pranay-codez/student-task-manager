@@ -59,7 +59,7 @@ class Task:
         while True:
             try:
                 id = input("Enter task ID to complete: ")
-                if id in self.task_data:
+                if id in self.task_data.keys():
                     self.task_data[id]["status"] = "completed"
                     break
                 else:
