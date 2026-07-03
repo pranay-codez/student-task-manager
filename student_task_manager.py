@@ -62,6 +62,9 @@ class Task:
                 if id in self.task_data.keys():
                     self.task_data[id]["status"] = "completed"
                     break
+                elif int(id) in self.task_data.keys():
+                    self.task_data[int(id)]["status"] = "completed"
+                    break
                 else:
                     print(f"Task ID {id} does not exist. Please enter a valid task ID.")
             except (KeyError, ValueError) :
@@ -74,8 +77,22 @@ class Task:
 
        
 
-    def delete_task(self,id):
-        self.task_data.pop(id, None)
+    def delete_task(self):
+         while True:
+            try:
+                id = input("Enter task ID to delete: ")
+                if id in self.task_data.keys():
+                    del self.task_data[id]
+                    break
+                elif int(id) in self.task_data.keys():
+                    del self.task_data[int(id)]
+                    break
+                else:
+                    print(f"Task ID {id} does not exist. Please enter a valid task ID.")
+            except (KeyError, ValueError) :
+                print(f"Task ID {id} does not exist or is invalid. Please enter a valid task ID.")
+            except (KeyError, ValueError) :
+                print(f"Task ID {id} does not exist or is invalid. Please enter a valid task ID.")
         
     def save_task(self):
         try:
@@ -113,16 +130,16 @@ def main():
 
         elif choice == '2':
             task_manager.list_task()
+            task_manager.save_task()  # Save after listing tasks
            
 
 
         elif choice == '3':
             task_manager.complete_task()
-        
+            task_manager.save_task()  # Save after completing a task
 
         elif choice == '4':
-            id_delete = input("Enter task ID to delete: ")
-            task_manager.delete_task(id_delete)
+            task_manager.delete_task()
             
 
         elif choice == '5':
