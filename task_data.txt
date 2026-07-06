@@ -1,8 +1,14 @@
 {
     "2": {
+        "name": "Python",
+        "due_date": null,
+        "course_tag": "CS50",
+        "status": "completed"
+    },
+    "3": {
         "name": "Error handling",
         "due_date": null,
         "course_tag": null,
-        "status": "completed"
+        "status": "pending"
     }
 }

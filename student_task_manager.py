@@ -17,7 +17,7 @@ class Task:
         try:
             with open("task_data.txt", "r") as file:
                 self.task_data = json.load(file)
-                self.id = len(self.task_data) + 1
+                self.id = len(self.task_data[id]) + 1
         except json.JSONDecodeError:
             print("Error: task_data.txt is corrupted. An empty list is being created.")
             self.task_data = {}
