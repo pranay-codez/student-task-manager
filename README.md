@@ -39,6 +39,11 @@ While building this project, I learned:
 * Add task priorities
 * Improve the command-line interface
 
+## How to run
+
+- Run the python file program
+- Check the file task_data to confirm your operations
+
 ## Project Status
 
 This project was built as part of my Python learning roadmap. I plan to revisit and improve it as I continue learning more advanced Python concepts.
